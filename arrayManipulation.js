@@ -1,9 +1,9 @@
-// Function to process an array of numbers
+
 function processArray(numbers) {
   return numbers.map(num => num % 2 === 0 ? num * num : num * 3);
 }
 
-// Function to format strings based on the processed numbers
+
 function formatArrayStrings(strings, numbers) {
   return strings.map((str, index) => {
       const num = numbers[index];
@@ -15,16 +15,14 @@ function formatArrayStrings(strings, numbers) {
   });
 }
 
-// Example usage
+
 const numbers = [1, 2, 3, 4, 5];
 const processedNumbers = processArray(numbers);
-console.log(processedNumbers); // [3, 4, 9, 16, 15]
+console.log(processedNumbers);
 
 const strings = ["marry", "seed", "christian", "life", "beans"];
 const formattedStrings = formatArrayStrings(strings, processedNumbers);
-console.log(formattedStrings); // ['hello', 'WORLD', 'javascript', 'IS', 'fun']
-
-// Export the functions for use in other modules
+console.log(formattedStrings); 
 module.exports = {
   processArray,
   formatArrayStrings
